@@ -12,8 +12,8 @@ public class ManagementBaseUrl {
 
     public static void setUp(){
 
-        spec= new RequestSpecBuilder().setContentType(ContentType.JSON).addHeader("Authorization","Bearer "+generateToken())
-                .setBaseUri("https://medunna.com").build();
+        spec= new RequestSpecBuilder().setContentType(ContentType.JSON)
+                .setBaseUri("https://managementonschools.com/").build();
 
     }
 

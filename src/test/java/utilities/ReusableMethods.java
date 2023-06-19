@@ -50,6 +50,7 @@ public class ReusableMethods {
 
     //Alert promptBox
     public static void alertprompt(String text) {
+
         Driver.getDriver().switchTo().alert().sendKeys(text);
     }
 
