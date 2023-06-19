@@ -18,6 +18,7 @@ import java.util.Date;
 import java.util.List;
 
 public class ReusableMethods {
+
     protected static ExtentReports extentReports;
     protected static ExtentHtmlReporter extentHtmlReporter;
     protected static ExtentTest extentTest;
@@ -57,6 +58,7 @@ public class ReusableMethods {
     /*
         Select select2 = new Select(gun);
         select2.selectByVisibleText("7");
+
         //ddmVisibleText(gun,"7"); --> Yukarıdaki kullanım yerine sadece method ile handle edebilirim
      */
     public static void ddmVisibleText(WebElement ddm, String secenek) {
