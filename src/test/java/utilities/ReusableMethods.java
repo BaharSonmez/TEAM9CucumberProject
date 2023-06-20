@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -137,17 +138,17 @@ public class ReusableMethods {
 
     //ExtentReport
     public static void extentReport() {
-        extentReports = new ExtentReports();
-        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
-        extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
-        extentReports.attachReporter(extentHtmlReporter);
-
-        //Raporda gözükmesini istediğimiz bilgiler için
-        extentReports.setSystemInfo("Browser", "Chrome");
-        extentReports.setSystemInfo("Tester", "Erol");
-        extentHtmlReporter.config().setDocumentTitle("Extent Report");
-        extentHtmlReporter.config().setReportName("Smoke Test Raporu");
+//        extentReports = new ExtentReports();
+//        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
+//        String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
+//        extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
+//        extentReports.attachReporter(extentHtmlReporter);
+//
+//        //Raporda gözükmesini istediğimiz bilgiler için
+//        extentReports.setSystemInfo("Browser", "Chrome");
+//        extentReports.setSystemInfo("Tester", "Erol");
+//        extentHtmlReporter.config().setDocumentTitle("Extent Report");
+//        extentHtmlReporter.config().setReportName("Smoke Test Raporu");
     }
 
     //WebTable
@@ -202,4 +203,28 @@ public class ReusableMethods {
         String attribute_Value = (String) js.executeScript("return document.getElementById('" + id + "')." + attributeName);
         System.out.println("Attribute Value: = " + attribute_Value);
     }
+    public static Connection getConnection(){
+        try {
+            return DriverManager.getConnection("jdbc:postgresql://managementonschools.com:5432/school_management", "select_user", "43w5ijfso");
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+
+    }
+    public static Statement getStatement(){
+        try {
+            return getConnection().createStatement();
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
+    public static ResultSet getResultSet(String query){
+        try {
+            return getStatement().executeQuery(query);
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
+
+
 }
