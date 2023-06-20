@@ -12,8 +12,8 @@ public class US08_PozitifTest {
     ChooseLesson_Nihat chooseLesson;
 
     @Given("Kullanici {string} sayfasina gider")
-    public void kullanici_sayfasina_gider(String siteUrl) {
-        Driver.getDriver().get(ConfigReader.getProperty(siteUrl));
+    public void kullanici_sayfasina_gider(String url) {
+        Driver.getDriver().get(ConfigReader.getProperty(url));
     }
 
     @When("Kullanici sitenin logosunu gorur")
