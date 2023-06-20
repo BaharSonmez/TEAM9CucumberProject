@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class ChooseLesson {
-    public ChooseLesson(){
+public class ChooseLesson_Nihat {
+    public ChooseLesson_Nihat(){
         PageFactory.initElements(Driver.getDriver(),this);}
     @FindBy(xpath = "//img[@class='img-fluid']") public WebElement logo;
     @FindBy(xpath = "//a[@class='header_link ms-2']") public WebElement loginGiris;
