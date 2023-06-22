@@ -1,5 +1,6 @@
 package utilities;
 
+import com.aventstack.extentreports.ExtentReporter;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -137,17 +138,17 @@ public class ReusableMethods {
 
     //ExtentReport
     public static void extentReport() {
-        extentReports = new ExtentReports();
+       extentReports = new ExtentReports();
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
-        extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
-        extentReports.attachReporter(extentHtmlReporter);
+       String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
+       // extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
+       //extentReports.attachReporter(extentHtmlReporter);
 
         //Raporda gözükmesini istediğimiz bilgiler için
-        extentReports.setSystemInfo("Browser", "Chrome");
-        extentReports.setSystemInfo("Tester", "Erol");
-        extentHtmlReporter.config().setDocumentTitle("Extent Report");
-        extentHtmlReporter.config().setReportName("Smoke Test Raporu");
+        //extentReports.setSystemInfo("Browser", "Chrome");
+       // extentReports.setSystemInfo("Tester", "Erol");
+       // extentHtmlReporter.config().setDocumentTitle("Extent Report");
+      //  extentHtmlReporter.config().setReportName("Smoke Test Raporu");
     }
 
     //WebTable
