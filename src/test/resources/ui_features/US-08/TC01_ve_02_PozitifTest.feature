@@ -1,7 +1,7 @@
 Feature: US08_Choose_Lesson
 
   Background: Kullanici Managementonschools sitesine gider
-    Given Kullanici "managementScoolsUrl" sayfasina gider
+    Given Kullanici url sayfasina gider
 
   Scenario: TC01 Kullanici Vice Dean olarak siteye giris yapar
     When Kullanici sitenin logosunu gorur

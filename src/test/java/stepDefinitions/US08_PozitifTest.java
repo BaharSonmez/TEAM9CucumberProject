@@ -11,9 +11,9 @@ import utilities.Driver;
 public class US08_PozitifTest {
     ChooseLesson_Nihat chooseLesson;
 
-    @Given("Kullanici {string} sayfasina gider")
-    public void kullanici_sayfasina_gider(String url) {
-        Driver.getDriver().get(ConfigReader.getProperty(url));
+    @Given("Kullanici url sayfasina gider")
+    public void kullaniciUrlSayfasinaGider() {
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
 
     @When("Kullanici sitenin logosunu gorur")
@@ -111,6 +111,7 @@ public class US08_PozitifTest {
 
 
     }
+
 
 }
 

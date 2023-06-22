@@ -20,6 +20,11 @@ public class ChooseLesson_Nihat {
     @FindBy(xpath = "(//input[@type='checkbox'])[1]") public WebElement compulsoryButonu;
     @FindBy(xpath = "//input[@placeholder='Credit Score']") public WebElement creditScore;
     @FindBy(xpath = "(//button[text()='Submit'])[2]") public WebElement submitLessons;
+    @FindBy(xpath = "(//li[@class='page-item'])[8]") public WebElement sonsayfaButonu;
+    @FindBy(xpath = "//h4[text()='Twitter Widget']") public WebElement baslik;
+    @FindBy(xpath = "/td") public WebElement eklenenDers;
+    @FindBy(xpath = "(//span[text()='1'])[2]") public WebElement yesYazisi;
+    @FindBy(xpath = "//span[text()='7']") public WebElement KrediNotu;
 
 
 
