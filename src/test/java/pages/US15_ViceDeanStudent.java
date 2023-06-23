@@ -1,11 +1,10 @@
-package pages.US15;
+package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import utilities.Driver;
+import pages.Login;
 
-public class US15_ViceDeanStudent extends Login{
+public class US15_ViceDeanStudent extends Login {
     @FindBy(xpath = "(//*[@class='nav-link'])[10]")
     public WebElement studentmanagement;
     @FindBy(xpath = "//*[@id='advisorTeacherId']")

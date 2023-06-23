@@ -1,4 +1,4 @@
-@VICE
+@VICE @Dean
 Feature: Vice Dean, öğrenci oluşturabilme
   Scenario Outline: Password girilebilmelidir. Password en az 8 karakterden oluşmalıdır.
     Given Kullanıcı _"https://managementonschools.com/" sayfasina gider

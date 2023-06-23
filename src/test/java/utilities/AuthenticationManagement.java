@@ -8,12 +8,15 @@ import static io.restassured.RestAssured.given;
 public class AuthenticationManagement {
 
 
-    public static String generateToken(){
+    public static String generateToken() {
 
-        String body ="{ \"password\": \"Mark.123\", \"rememberMe\": true, \"username\": \"mark_twain\" }";
+        String body = "{ \"password\": \"485424698\", \"username\": \"Admin\" }";
 
-        Response response = given().contentType(ContentType.JSON).body(body).post("https://managementonschools.com/");
-
-        return response.jsonPath().getString("id_token");
+        Response response = given()
+                .body(body)
+                .contentType(ContentType.JSON)
+                .post("https://managementonschools.com/app/auth/login");
+        //response.prettyPrint();
+        return response.jsonPath().getString("token");
     }
 }

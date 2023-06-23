@@ -10,11 +10,11 @@ public class ManagementBaseUrl {
 
     public static RequestSpecification spec;
 
-    public static void setUp(){
-
-        spec= new RequestSpecBuilder().setContentType(ContentType.JSON)
-                .setBaseUri("https://managementonschools.com/").build();
-
+    public static void setUp() {
+        spec = new RequestSpecBuilder()
+                .addHeader("Authorization", generateToken())
+                .setBaseUri("https://managementonschools.com/app/")
+                .setContentType(ContentType.JSON)
+                .build();
     }
-
 }

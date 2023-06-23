@@ -5,10 +5,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
-import pages.US15.Login;
-import pages.US15.US15_ViceDeanStudent;
+import pages.Login;
+import pages.US15_ViceDeanStudent;
 
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -48,16 +47,16 @@ public class US15StepDefinition {
 
     @And("And Kullanıcı NAME İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void andKullanıcıNAMEİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar() {
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -69,16 +68,16 @@ public class US15StepDefinition {
 
     @And("Kullanıcı SurNAME i boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void kullanıcıSurNAMEIBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -90,16 +89,16 @@ public class US15StepDefinition {
 
     @And("Kullanıcı BIRTH PLACE İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void kullanıcıBIRTHPLACEİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -113,16 +112,16 @@ public class US15StepDefinition {
 
     @And("Kullanıcı E-mail İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void kullanıcıEMailİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -134,16 +133,16 @@ public class US15StepDefinition {
 
     @And("Kullanıcı Telefon numarası İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void kullanıcıTelefonNumarasıİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -155,17 +154,17 @@ public class US15StepDefinition {
 
     @And("Kullanıcı cinsiyet İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void kullanıcıCinsiyetİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
         ReusableMethods.click(vice.submit);
         ReusableMethods.bekle(2);
     }
@@ -181,16 +180,16 @@ public class US15StepDefinition {
 
     @And("Kullanıcı Date Of Birth İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void kullanıcıDateOfBirthİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -202,16 +201,16 @@ public class US15StepDefinition {
 
     @And("Kullanıcı User Name İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void kullanıcıUserNameİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -223,16 +222,16 @@ public class US15StepDefinition {
 
     @And("Kullanıcı father name İ boş bırakıp NAME,surname,Birth Place,email,Date Of Birth,Ssn,User name,cinsiyet,mother name,geçerli password,Telefon numarası girdikten sonra submit e tıklar")
     public void kullanıcıFatherNameİBoşBırakıpNAMESurnameBirthPlaceEmailDateOfBirthSsnUserNameCinsiyetMotherNameGeçerliPasswordTelefonNumarasıGirdiktenSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -244,16 +243,16 @@ public class US15StepDefinition {
 
     @And("Kullanıcı Mother Name İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void kullanıcıMotherNameİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -283,17 +282,17 @@ public class US15StepDefinition {
     @And("Kullanıcı SSN BÖLÜMÜNE; {string} ve dokuz rakamdan oluşan numarayı,diğer bölümler girdikten sonra submit e tıklar")
     public void kullanıcıSSNBÖLÜMÜNEVeDokuzRakamdanOluşanNumarayıDiğerBölümlerGirdiktenSonraSubmitETıklar(String ihtimal) {
         vice.ssn.sendKeys(ihtimal);
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
 
@@ -301,17 +300,17 @@ public class US15StepDefinition {
 
     @And("Kullanıcı tüm bölümleri girdikten sonra submit e tıklar")
     public void kullanıcıTümBölümleriGirdiktenSonraSubmitETıklar() {
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.smpassword.sendKeys(ConfigReader.getProperty("erelpassword"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.smpassword.sendKeys(ConfigReader.getProperty("alipassword"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
@@ -327,16 +326,16 @@ public class US15StepDefinition {
     @And("Kullanıcı password kısmına {string} İ boş bırakıp diğer alanlar doldurulup sonra submit e tıklar")
     public void kullanıcıPasswordKısmınaİBoşBırakıpDiğerAlanlarDoldurulupSonraSubmitETıklar(String Pass) {
         vice.smpassword.sendKeys(Pass);
-        vice.name.sendKeys(ConfigReader.getProperty("erelname"));
-        vice.surname.sendKeys(ConfigReader.getProperty("erelsurname"));
-        vice.email.sendKeys(ConfigReader.getProperty("erelemail"));
-        vice.birthDay.sendKeys(ConfigReader.getProperty("ereldateofbirth"));
-        vice.ssn.sendKeys(ConfigReader.getProperty("erelssn"));
-        vice.username.sendKeys(ConfigReader.getProperty("erelusername"));
-        vice.fatherName.sendKeys(ConfigReader.getProperty("erelfathername"));
-        vice.motherName.sendKeys(ConfigReader.getProperty("erelmothername"));
-        vice.birthPlace.sendKeys(ConfigReader.getProperty("erelbirthplace"));
-        vice.phoneNumber.sendKeys(ConfigReader.getProperty("erelphone"));
+        vice.name.sendKeys(ConfigReader.getProperty("aliname"));
+        vice.surname.sendKeys(ConfigReader.getProperty("alisurname"));
+        vice.email.sendKeys(ConfigReader.getProperty("aliemail"));
+        vice.birthDay.sendKeys(ConfigReader.getProperty("alidateofbirth"));
+        vice.ssn.sendKeys(ConfigReader.getProperty("alissn"));
+        vice.username.sendKeys(ConfigReader.getProperty("aliusername"));
+        vice.fatherName.sendKeys(ConfigReader.getProperty("alifathername"));
+        vice.motherName.sendKeys(ConfigReader.getProperty("alimothername"));
+        vice.birthPlace.sendKeys(ConfigReader.getProperty("alibirthplace"));
+        vice.phoneNumber.sendKeys(ConfigReader.getProperty("aliphone"));
         vice.female.click();
         ReusableMethods.click(vice.submit);
     }
