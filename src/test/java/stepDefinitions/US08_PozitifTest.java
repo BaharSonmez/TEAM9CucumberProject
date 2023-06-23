@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -77,7 +78,9 @@ public class US08_PozitifTest {
         chooseLesson.lessonName.click();
         chooseLesson.lessonName.clear();
         Thread.sleep(3000);
-        chooseLesson.lessonName.sendKeys(ConfigReader.getProperty("lessonName"));
+
+
+       chooseLesson.lessonName.sendKeys(ConfigReader.getProperty("lessonName"));
 
     }
 
