@@ -12,7 +12,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US08_PozitifTest {
-    ChooseLesson_Nihat chooseLesson;
+    ChooseLesson_Nihat chooseLesson= new ChooseLesson_Nihat();
 
     @Given("Kullanici url sayfasina gider")
     public void kullaniciUrlSayfasinaGider() {
