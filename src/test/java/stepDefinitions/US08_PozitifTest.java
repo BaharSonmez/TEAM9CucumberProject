@@ -107,8 +107,8 @@ public class US08_PozitifTest {
 
     }
 
-    @Then("Kullanici Submit butonuna tiklar")
-    public void kullanici_submit_butonuna_tiklar() {
+    @Then("Kullanici Submit butonuna tiklamalidir")
+    public void kullanici_submit_butonuna_tiklamalidir() {
         chooseLesson = new ChooseLesson_Nihat();
         chooseLesson.submitLessons.click();
 
