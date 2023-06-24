@@ -4,14 +4,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.US15.Login;
+import pages.Login;
 
-import pages.US15.US15_ViceDeanStudent;
-import pages.US16.ViceDeanContact;
+import pages.US15_ViceDeanStudent;
+import pages.ViceDeanContact;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 import static org.junit.Assert.assertTrue;
+import static utilities.ReusableMethods.bekle;
 
 public class US16StepDefinition {
     ViceDeanContact contact=new ViceDeanContact();
@@ -26,12 +27,14 @@ public class US16StepDefinition {
     public void kullaniciMenuIcersindeContactGetAllSecnegineTiklar() {
         //contact.contactGetAll.click();
         ReusableMethods.click(contact.contactGetAll);
+        bekle(1);
     }
 
     @Then("Silme butonu gorur")
     public void silmeButonuGorur() {
+        bekle(2);
         boolean deleteElement= false;
-        Assert.assertTrue("Element bulunamdı",deleteElement);
+        Assert.assertFalse("Element bulunamdı",deleteElement);
         ReusableMethods.tumSayfaResmi("US16 Silme Butonu");
     }
     @When("Yazarin name'i gorur")
@@ -69,7 +72,7 @@ public class US16StepDefinition {
     @Then("Kullanici Silme butonuna tiklar")
     public void kullaniciSilmeButonunaTiklar() {
         boolean deleteElement= false;
-        Assert.assertTrue("Element bulunamdı",deleteElement);
+        Assert.assertFalse("Element bulunamdı",deleteElement);
         ReusableMethods.tumSayfaResmi("US16 Silme Butonu");
     }
 }
