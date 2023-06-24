@@ -1,10 +1,10 @@
 package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import pages.US15.Login;
-import pages.US15.US15_ViceDeanStudent;
+import pages.Login;
+import pages.US15_ViceDeanStudent;
 
-import pages.US25.US25_AdminCreate;
+import pages.US25_AdminCreate;
 
 import utilities.ConfigReader;
 import utilities.ReusableMethods;

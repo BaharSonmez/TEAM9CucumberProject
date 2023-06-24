@@ -16,7 +16,12 @@ import org.junit.runner.RunWith;
         monochrome = false,//konsolu okunakli hala getirir false olunca kullanılmayacak.
         features = "src/test/resources",
         glue = {"stepDefinitions","hooks"},
+
         tags =" @NewAddAdmin",
+
+
+        tags ="@US15Api",
+
         dryRun = false
 )
 
