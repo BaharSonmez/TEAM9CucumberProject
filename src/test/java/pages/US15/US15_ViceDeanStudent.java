@@ -34,7 +34,7 @@ public class US15_ViceDeanStudent extends Login{
     public WebElement smpassword;
     @FindBy(xpath = "(//*[@class='form-check-input'])[2]")
     public WebElement male;
-    @FindBy(xpath = "(//*[@class='form-check-input'])[1]")
+    @FindBy(xpath = "")
     public WebElement female;
     @FindBy(xpath = "//*[@class='fw-semibold btn btn-primary btn-lg']")
     public WebElement submit;
