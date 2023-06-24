@@ -30,7 +30,8 @@ public class AdminStepDefinitions {
    }
    @Then("kullanıcı admin olarak password kısmını doldurur")
    public void kullanıcı_admin_olarak_password_kısmını_doldurur() {
-      adminPage.passwordButton.sendKeys(ConfigReader.getProperty("adminPassword"));
+      adminPage.passwordButton.sendKeys(ConfigReader.getProperty
+              ("adminPassword"));
    }
    @Then("kullanıcı log ın giris butonuna tıklar")
    public void kullanıcı_log_ın_giris_butonuna_tıklar() {
