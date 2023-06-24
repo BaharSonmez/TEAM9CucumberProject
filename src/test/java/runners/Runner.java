@@ -17,7 +17,14 @@ import org.junit.runner.RunWith;
         features = "src/test/resources",
         glue = {"stepDefinitions","hooks"},
 
+
         tags ="@Vice",
+
+
+
+
+
+
 
         dryRun = false
 )

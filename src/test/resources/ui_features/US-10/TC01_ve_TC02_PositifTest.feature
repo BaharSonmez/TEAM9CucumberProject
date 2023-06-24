@@ -1,5 +1,5 @@
 @Vice
-Feature: US08_Choose_Lesson
+Feature: US10_Choose_Lesson
 
   Scenario: TC01 Kullanici Vice Dean olarak siteye giris yapar
     Given Kullanici url sayfasina gider
