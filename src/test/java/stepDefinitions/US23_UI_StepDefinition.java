@@ -39,12 +39,11 @@ public class US23_UI_StepDefinition {
         ReusableMethods.bekle(2);
     }
 
-
     @And("Admin Vice Dean Management sayfasina gider")
     public void adminViceDeanManagementSayfasinaGider() {
+
         esraPage.menuButtonE.click();
         esraPage.viceDeanButton.click();
-
 
     }
 
@@ -189,7 +188,6 @@ public class US23_UI_StepDefinition {
     public void adminPhoneKisminaDortUcDortSeklindeMinimumOnIkiKarakterGirer() {
         esraPage.phoneNumberE.sendKeys("1199-111-2222");
     }
-
     @And("Admin name, surname, birth place, gender, date of birth,  ssn, username, password girer")
     public void adminNameSurnameBirthPlaceGenderDateOfBirthSsnUsernamePasswordGirer() {
         esraPage.namE.sendKeys("esra");
@@ -202,23 +200,89 @@ public class US23_UI_StepDefinition {
         esraPage.passwordE.sendKeys("12345678");
 
     }
-
     @And("Admin phone number should be exact on iki characters yazisini goruntuler")
     public void adminPhoneNumberShouldBeExactOnIkiCharactersYazisiniGoruntuler() {
         //Assert.assertEquals(esraPage.phoneuyariYazisi,"Error: Phone number should be exact 12 characters");
         Assert.assertTrue(esraPage.phoneuyariYazisi.isDisplayed());
 
     }
-
     //TC09
     @And("Admin Phone kismina en az on iki karakterde harf girer")
     public void adminPhoneKisminaEnAzOnIkiKarakterdeHarfGirer() {
         esraPage.phoneNumberE.sendKeys("aaaaaaaaaaaaa");
     }
-
     @And("Admin Please entervalid phone number yazisini goruntuler")
     public void adminPleaseEntervalidPhoneNumberYazisiniGoruntuler() {
-        Assert.assertTrue(esraPage.phoneValidUyari.isDisplayed());
+        Assert.assertTrue(esraPage.phoneuyariYazisi.isDisplayed());
+    }
+    //TC10
+    @And("Admin SSN kismina uc iki dort seklinde dokuz rakam girer")
+    public void adminSSNKisminaUsIkiDortSeklindeDokuzRakamGirer() {
+        esraPage.ssnE.sendKeys("678-22-1234");
+        Assert.assertTrue(esraPage.validssn.isDisplayed());
+
+    }
+    @And("Admin SSN kismini bos birakir")
+    public void adminSSNKisminiBosBirakir() {
+        esraPage.ssnE.clear();
+
+    }
+    @And("Admin Required yazisini goruntuler ve ssn bos birakilamayacagini dogrular")
+    public void adminRequiredYazisiniGoruntulerVeSsnBosBirakilamayacaginiDogrular() {
+        Assert.assertTrue(esraPage.invalidSSN.isDisplayed());
+
+    }
+
+    //TC11
+    @And("Admin Username kismina en az dort karakter girer")
+    public void adminUsernameKisminaEnAzDortKarakterGirer() {
+        esraPage.usernamE.sendKeys("esra");
+        Assert.assertTrue(esraPage.validusername.isDisplayed());
+
+    }
+    @And("Admin username kismini bos birakir")
+    public void adminUsernameKisminiBosBirakir() {
+        esraPage.usernamE.clear();
+
+    }
+    @And("Admin Required yazisini goruntuler ve username bos birakilamayacagini dogrular")
+    public void adminRequiredYazisiniGoruntulerVeUsernameBosBirakilamayacaginiDogrular() {
+        Assert.assertTrue(esraPage.invalidSurname.isDisplayed());
+    }
+
+    //TC12
+    @And("Admin Password kismina bir buyuk harf girer")
+    public void adminPasswordKisminaBirBuyukHarfGirer() {
+        esraPage.passwordE.sendKeys("E");
+
+    }
+    @And("Admin Password kismina bir kucuk harf girer")
+    public void adminPasswordKisminaBirKucukHarfGirer() {
+        esraPage.passwordE.sendKeys("s");
+
+    }
+    @And("Admin Password kismina alti tane rakam girer ve girilebildigini goruntuler")
+    public void adminPasswordKisminaAltiTaneRakamGirerVeGirilebildiginiGoruntuler() {
+        esraPage.passwordE.sendKeys("123456");
+        Assert.assertTrue(esraPage.validpassword.isDisplayed());
+
+    }
+    @And("Admin Password kismina en az sekiz rakam girer ve girilebildigini goruntuler")
+    public void adminPasswordKisminaEnAzSekizRakamGirerVeGirilebildiginiGoruntuler() {
+        esraPage.passwordE.sendKeys("12345678");
+        Assert.assertTrue(esraPage.validpassword.isDisplayed());
+
+    }
+    @And("Admin Password kismina sekizden az karakter girer ve Minimum sekiz character yazisini goruntuler")
+    public void adminPasswordKisminaSekizdenAzKarakterGirerVeMinimumSekizCharacterYazisiniGoruntuler() {
+        esraPage.passwordE.sendKeys("1234");
+        Assert.assertTrue(esraPage.invalidpassword.isDisplayed());
+
+    }
+    @And("Admin Password kismini bos birakir ve Required yazisini goruntuler")
+    public void adminPasswordKisminiBosBirakirVeRequiredYazisiniGoruntuler() {
+        esraPage.passwordE.clear();
+        Assert.assertTrue(esraPage.invalidpassword.isDisplayed());
     }
 }
 

@@ -73,14 +73,14 @@ Feature: US23
 
   @US23_TC10
   Scenario:
-      And Admin SSN kismina 3-2-4 seklinde 9 rakam girer
+      And Admin SSN kismina uc iki dort seklinde dokuz rakam girer
       And Admin SSN kismini bos birakir
       And Admin Required yazisini goruntuler ve ssn bos birakilamayacagini dogrular
 
 
   @US23_TC11
   Scenario:
-      And Admin Username kismina en az 4 karakter girer
+      And Admin Username kismina en az dort karakter girer
       And Admin username kismini bos birakir
       And Admin Required yazisini goruntuler ve username bos birakilamayacagini dogrular
 
@@ -88,8 +88,8 @@ Feature: US23
   Scenario:
       And Admin Password kismina bir buyuk harf girer
       And Admin Password kismina bir kucuk harf girer
-      And Admin Password kismina 6 tane rakam girer ve girilebildigini goruntuler
-      And Admin Password kismina en az 8 rakam girer ve girilebildigini goruntuler
-      And Admin Password kismina 8'den az karakter girer ve Minimum 8 character yazisini goruntuler
+      And Admin Password kismina alti tane rakam girer ve girilebildigini goruntuler
+      And Admin Password kismina en az sekiz rakam girer ve girilebildigini goruntuler
+      And Admin Password kismina sekizden az karakter girer ve Minimum sekiz character yazisini goruntuler
       And Admin Password kismini bos birakir ve Required yazisini goruntuler
 
