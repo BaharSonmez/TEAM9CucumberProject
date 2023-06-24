@@ -10,7 +10,7 @@ public class US_05Step {
     US_05 adminDean = new US_05 ();
 
 
-
+/*
 
     @Given("Admin olarak {string} adresine gider")
     public void admin_olarak_adresine_gider(String string) {
@@ -90,6 +90,8 @@ public class US_05Step {
 
     }
 
+
+ */
 
 
 
