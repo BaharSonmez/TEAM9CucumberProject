@@ -1,8 +1,5 @@
-Feature: US08_Choose_Lesson
-
-
-
-
+@Vice
+Feature: US09_Choose_Lesson
 
   Scenario: TC01 Kullanici Vice Dean olarak siteye giris yapar
     Given Kullanici url sayfasina gider
@@ -19,9 +16,10 @@ Feature: US08_Choose_Lesson
     And  Kullanici Compulsory butonuna tiklar
     And  Kullanici Credit Score bolumune kredi notu girer
     And  Kullanici Submit butonuna tiklar
-
-
     And Kullanici ekledigi dersleri gorene kadar sayfayi asagi ceker
-    And Kullanici Lesson name alaninda eklenen dersi gorur
-    And Kullanici Compulsory alaninda Yes yazisini gorur
-    And Kullanici Credit Score alaninda kredi notunu gorur
+
+  Scenario: TC03
+    And Kullanici silme butonuna tiklar
+    And Kullanici onay mesajini gorur
+    And Kullanici ders Lesson name,Compulsory, Credit Score alanlarinda  guncelleme yapar
+
