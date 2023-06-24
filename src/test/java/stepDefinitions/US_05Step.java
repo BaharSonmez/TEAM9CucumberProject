@@ -11,42 +11,53 @@ public class US_05Step {
 
 
 
+    /*
+      @Given("Admin olarak {string} adresine gider")
+      public void admin_olarak_adresine_gider(String string) {
+          // Write code here that turns the phrase above into concrete actions
+          throw new io.cucumber.java.PendingException();
+      }
 
-    @Given("Admin olarak {string} adresine gider")
-    public void admin_olarak_adresine_gider(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @Then("Admin olarak Login ikonunu tiklar")
-    public void admin_olarak_login_ikonunu_tiklar() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+      @Then("Admin olarak Login ikonunu tiklar")
+      public void admin_olarak_login_ikonunu_tiklar() {
+          // Write code here that turns the phrase above into concrete actions
+          throw new io.cucumber.java.PendingException();
+      }
+
+
     @Then("Admin olarak username kutusununa {string} girer")
     public void admin_olarak_username_kutusununa_girer(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
     @Then("Admin olarak password kutusuna {string} girer")
     public void admin_olarak_password_kutusuna_girer(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
+
     @Then("Admin olarak Login butonunu tiklar")
     public void admin_olarak_login_butonunu_tiklar() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
+
     @Then("Admin olarak Menu butonuna basar")
     public void admin_olarak_menu_butonuna_basar() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
     @Then("Admin olarak Dean Management linkini tiklar")
     public void admin_olarak_dean_management_linkini_tiklar() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
+
     @Given("Admin Dean List'i gorur")
     public void admin_dean_list_i_gorur() {
         // Write code here that turns the phrase above into concrete actions
@@ -82,6 +93,7 @@ public class US_05Step {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+    /*
     @Given("Admin Delete butonuna basar")
     public void admin_delete_butonuna_basar() {
         // Write code here that turns the phrase above into concrete actions
@@ -89,6 +101,9 @@ public class US_05Step {
 
 
     }
+
+
+     */
 
 
 

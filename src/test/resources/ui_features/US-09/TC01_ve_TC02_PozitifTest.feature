@@ -18,7 +18,7 @@ Feature: US09_Choose_Lesson
     And  Kullanici Submit butonuna tiklar
     And Kullanici ekledigi dersleri gorene kadar sayfayi asagi ceker
 
-  Scenario: TC03
+  Scenario: TC02
     And Kullanici silme butonuna tiklar
     And Kullanici onay mesajini gorur
     And Kullanici ders Lesson name,Compulsory, Credit Score alanlarinda  guncelleme yapar
