@@ -2,9 +2,13 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.ChooseLesson_Nihat;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -48,6 +52,8 @@ public class US10_PozitifTest {
     @Then("Kullanici secilecek dersi Choose Lessons alana yazar")
     public void kullanici_secilecek_dersi_choose_lessons_alana_yazar() {
         chooseLesson= new ChooseLesson_Nihat();
+        chooseLesson.chooseLessonsInLessonProgramasViceDean.sendKeys(ConfigReader.getProperty("secilecekDers"),Keys.ENTER);
+        ReusableMethods.bekle(2);
 
 
 
@@ -55,62 +61,65 @@ public class US10_PozitifTest {
     }
     @Then("Kullanici Choose Education Term alanina  tiklar")
     public void kullanici_choose_education_term_alanina_tiklar() {
+        chooseLesson= new ChooseLesson_Nihat();
+        chooseLesson.selectEducationTerm.click();
 
 
     }
     @Then("Kullanici FAlL_SEMESTER secenegini secer")
     public void kullanici_f_al_l_semester_secenegini_secer() {
+        chooseLesson= new ChooseLesson_Nihat();
+
+        Select select = new Select(chooseLesson.selectEducationTerm);
+        select.selectByVisibleText("FALL_SEMESTER");
 
 
     }
-    @Then("FALL_SEMESTER secenegi gorunur olmalidir")
-    public void fall_semester_secenegi_gorunur_olmalidir() {
 
 
-    }
-    @Then("Kullanici Choose Day alanina tiklar")
-    public void kullanici_choose_day_alanina_tiklar() {
-
-
-    }
     @Then("Kullanici MONDAY secenegini secer")
     public void kullanici_monday_secenegini_secer() {
-
-
-    }
-    @Then("Kullanici Start Time alanina tiklar")
-    public void kullanici_start_time_alanina_tiklar() {
-
+        Select select = new Select(chooseLesson.selectday);
+        select.selectByVisibleText("MONDAY");
 
     }
+
+
     @Then("Kullanici ders baslangic saat ve dakikasini  secer")
     public void kullanici_ders_baslangic_saat_ve_dakikasini_secer() {
+        chooseLesson = new ChooseLesson_Nihat();
+        chooseLesson.startTime.sendKeys("10.00");
 
 
     }
-    @Then("Kullanici ogleden sonra ifadesini secer")
-    public void kullanici_ogleden_sonra_ifadesini_secer() {
 
 
-    }
     @Then("Kullanici Stop Time alanina tiklar")
     public void kullanici_stop_time_alanina_tiklar() {
-
+        chooseLesson = new ChooseLesson_Nihat();
+        chooseLesson.stopTime.click();
 
     }
     @Then("Kullanici ders bitis saat ve dakikasini secer")
     public void kullanici_ders_bitis_saat_ve_dakikasini_secer() {
 
-
+        chooseLesson = new ChooseLesson_Nihat();
+        chooseLesson.stopTime.sendKeys("12.00");
+        ReusableMethods.bekle(2);
     }
     @Then("Kullanici submit butonuna tiklar")
     public void kullanici_submit_butonuna_tiklar() {
-
+        chooseLesson = new ChooseLesson_Nihat();
+        chooseLesson.lessonProgramSubmit.click();
+        ReusableMethods.bekle(1);
 
     }
     @Then("Kullanici  onay mesajini gorur")
     public void kullanici_onay_mesajini_gorur() {
-
+        chooseLesson = new ChooseLesson_Nihat();
+        ReusableMethods.bekle(1);
+        Assert.assertTrue(chooseLesson.lessonCreatedProgramAlert.isDisplayed());
+        ReusableMethods.tumSayfaResmi("Ders Programi Olusturuldu");
 
     }
 

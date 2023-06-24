@@ -1,3 +1,4 @@
+@Vice
 Feature: US08_Choose_Lesson
 
   Scenario: TC01 Kullanici Vice Dean olarak siteye giris yapar
@@ -16,14 +17,10 @@ Feature: US08_Choose_Lesson
     And Kullanici secilecek dersi Choose Lessons alana yazar
     And Kullanici Choose Education Term alanina  tiklar
     And Kullanici FAlL_SEMESTER secenegini secer
-    And FALL_SEMESTER secenegi gorunur olmalidir
-    And Kullanici Choose Day alanina tiklar
     And Kullanici MONDAY secenegini secer
-    And Kullanici Start Time alanina tiklar
     And Kullanici ders baslangic saat ve dakikasini  secer
-    And Kullanici ogleden sonra ifadesini secer
     And Kullanici Stop Time alanina tiklar
     And Kullanici ders bitis saat ve dakikasini secer
-    And Kullanici ogleden sonra ifadesini secer
     And Kullanici submit butonuna tiklar
     And Kullanici  onay mesajini gorur
+    And Kullanici siteden cikar

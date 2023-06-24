@@ -1,4 +1,5 @@
-Feature: US08_Choose_Lesson
+@Vice
+Feature: US09_Choose_Lesson
 
   Scenario: TC01 Kullanici Vice Dean olarak siteye giris yapar
     Given Kullanici url sayfasina gider
@@ -21,3 +22,4 @@ Feature: US08_Choose_Lesson
     And Kullanici silme butonuna tiklar
     And Kullanici onay mesajini gorur
     And Kullanici ders Lesson name,Compulsory, Credit Score alanlarinda  guncelleme yapar
+

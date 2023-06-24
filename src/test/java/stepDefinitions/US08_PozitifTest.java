@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,6 +9,7 @@ import org.junit.Assert;
 import pages.ChooseLesson_Nihat;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class US08_PozitifTest {
     ChooseLesson_Nihat chooseLesson;
@@ -21,6 +23,7 @@ public class US08_PozitifTest {
     public void kullanici_yazisini_gorur() {
         chooseLesson = new ChooseLesson_Nihat();
         Assert.assertTrue(chooseLesson.logo.isDisplayed());
+        ReusableMethods.bekle(2);
     }
 
     @Then("Kullanici login olur")
@@ -40,12 +43,14 @@ public class US08_PozitifTest {
     public void kullanici_password_alanina_password_girer() {
         chooseLesson = new ChooseLesson_Nihat();
         chooseLesson.password.sendKeys(ConfigReader.getProperty("passwordViceDean"));
+        ReusableMethods.bekle(2);
     }
 
     @Then("Kullanici login butonuna tiklar")
     public void kullanici_login_butonuna_tiklar() {
         chooseLesson = new ChooseLesson_Nihat();
         chooseLesson.loginButton.click();
+        ReusableMethods.bekle(2);
 
     }
 
@@ -60,6 +65,7 @@ public class US08_PozitifTest {
     public void kullanici_lessons_butonuna_tiklar() {
         chooseLesson = new ChooseLesson_Nihat();
         chooseLesson.LessonsButonu.click();
+        ReusableMethods.bekle(1);
 
 
     }
@@ -67,7 +73,7 @@ public class US08_PozitifTest {
     @Then("Lesson Management yazisi gorunur olmalidir")
     public void lesson_management_yazisi_gorunur_olmalidir() {
         chooseLesson = new ChooseLesson_Nihat();
-        assert chooseLesson.LessonManagementYazisi.isDisplayed();
+        Assert.assertTrue(chooseLesson.LessonManagementYazisi.isDisplayed());
 
 
     }
@@ -77,10 +83,12 @@ public class US08_PozitifTest {
         chooseLesson = new ChooseLesson_Nihat();
         chooseLesson.lessonName.click();
         chooseLesson.lessonName.clear();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
 
-       chooseLesson.lessonName.sendKeys(ConfigReader.getProperty("lessonName"));
+      chooseLesson.lessonName.sendKeys(Faker.instance().name().username());
+      ReusableMethods.bekle(2);
+
 
     }
 
@@ -95,6 +103,7 @@ public class US08_PozitifTest {
     public void kullanici_credit_score_bolumune_kredi_notu_girer() {
         chooseLesson = new ChooseLesson_Nihat();
         chooseLesson.creditScore.sendKeys(ConfigReader.getProperty("creditNote"));
+        ReusableMethods.bekle(2);
 
     }
 
@@ -109,13 +118,24 @@ public class US08_PozitifTest {
     @Then("Kullanici Lesson Created mesajini gorur")
     public void kullanici_lesson_created_mesajini_gorur() {
         chooseLesson = new ChooseLesson_Nihat();
-        String alertYazisi = Driver.getDriver().switchTo().alert().getText();
-        Assert.assertEquals("Lesson Created", alertYazisi);
+        ReusableMethods.bekle(1);
+       Assert.assertTrue(chooseLesson.lessonCreatedAlert.isDisplayed());
+
+
 
 
     }
 
 
+    @And("Kullanici siteden cikar")
+    public void kullaniciSitedenCikar() {
+        chooseLesson = new ChooseLesson_Nihat();
+        chooseLesson.menuCikis.click();
+        ReusableMethods.bekle(1);
+        chooseLesson.logaut.click();
+        ReusableMethods.bekle(1);
+        chooseLesson.cikisOnay.click();
+    }
 }
 
 
