@@ -1,4 +1,10 @@
 package pages;
 
-public class US_05 {
+import org.openqa.selenium.support.PageFactory;
+import utilities.Driver;
+
+public class US_05 {public US_05() {
+    PageFactory.initElements(Driver.getDriver(), this);
+}
+
 }
