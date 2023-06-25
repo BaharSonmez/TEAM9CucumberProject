@@ -85,11 +85,7 @@ public class US_04Step {
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("Admin SSN kutusuna ucuncu ve besinci rakamdan sonra \\({double}) içeren dokuz rakamdan olusan {string} girer")
-    public void admin_ssn_kutusuna_ucuncu_ve_besinci_rakamdan_sonra_içeren_dokuz_rakamdan_olusan_girer(Double double1, String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+
 
     @Then("Admin User Name kutusuna {string} girer")
     public void admin_user_name_kutusuna_girer(String string) {
