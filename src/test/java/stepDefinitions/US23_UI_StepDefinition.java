@@ -91,6 +91,8 @@ public class US23_UI_StepDefinition {
         Assert.assertTrue(esraPage.invalidSurname.isDisplayed());
     }
 
+
+
     //TC03
     @And("Admin Birth Place kismina en az iki karakter girer")
     public void adminBirthPlaceKisminaEnAzIkiKarakterGirer() {

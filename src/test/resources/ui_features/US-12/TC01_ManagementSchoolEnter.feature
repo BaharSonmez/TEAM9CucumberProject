@@ -1,5 +1,5 @@
 
-
+@Bahar
 Feature: Vice Dean Ogretmene ders atayabilmeli
 
   Scenario:TC_01 Ders programi olusturulmalidir

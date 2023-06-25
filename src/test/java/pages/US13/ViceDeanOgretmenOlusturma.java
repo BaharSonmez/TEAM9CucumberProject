@@ -59,6 +59,7 @@ public class ViceDeanOgretmenOlusturma {
     @FindBy(xpath ="//*[text()='Is Advisor Teacher']")
     public WebElement adviserTeacheryazisi;
 
+
     @FindBy(xpath ="//*[@id='isAdvisorTeacher']")
     public WebElement adviserCheckBox;
 
@@ -77,7 +78,7 @@ public class ViceDeanOgretmenOlusturma {
     @FindBy(xpath ="//input[@id='ssn']")
     public WebElement ssnKutusu;
 
-    @FindBy(xpath ="(//*[@class='invalid-feedback'])[7]")
+    @FindBy(xpath ="(//div[@class='invalid-feedback'])[7]")
     public WebElement ssnRequired;
 
     @FindBy(xpath ="//input[@id='username']")
@@ -95,7 +96,8 @@ public class ViceDeanOgretmenOlusturma {
     @FindBy(xpath ="//button[@class='fw-semibold btn btn-primary btn-lg']")
     public WebElement submit2;
 
-
+    @FindBy(xpath ="//label[@class='form-label']")
+    public WebElement genderYazisi;
 
     }
 

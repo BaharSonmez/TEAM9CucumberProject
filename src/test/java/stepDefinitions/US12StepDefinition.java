@@ -20,6 +20,7 @@ public class US12StepDefinition {
 
     @When("Kullanici Login butonuna tiklar")
     public void kullanici_login_butonuna_tiklar() {
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
         viceDean.homePageLogin1.click();
         ReusableMethods.bekle(1);
 
