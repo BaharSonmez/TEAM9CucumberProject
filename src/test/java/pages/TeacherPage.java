@@ -4,15 +4,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class TeacherPage {
-    public TeacherPage() {PageFactory.initElements(Driver.getDriver(), this);
-    }
-    @FindBy(className = "header_link ms-2")
-    public WebElement login1;
+    public WebElement edit;
 
-    @FindBy(className = "fw-semibold btn btn-primary")
-    public WebElement login2;
+ public ReusableMethods ChooseStudents;
+
+ public TeacherPage() {PageFactory.initElements(Driver.getDriver(), this);
+    }
+    @FindBy(className = "ms-2")
+   public WebElement login1;
+
+    @FindBy(className = "btn-primary")
+    public WebElement login;
 
     @FindBy(id = "username")
     public WebElement usernameButton;
@@ -26,11 +31,11 @@ public class TeacherPage {
     @FindBy(xpath = "(//a[@class='nav-link'])[7]")
     public WebElement meetManagementButton;
 
-    @FindBy(className = " css-19bb58m")
-    public WebElement ChooseStudents;
+  @FindBy(className = "19bb58m")
+    public WebElement ChooseStudent;
 
-    @FindBy(className = " css-9jq23d")
-    public WebElement ogrIsimSec;
+  @FindBy(className = "9jq23d")
+   public WebElement ogrIsimSec;
 
     @FindBy (xpath = "(//*[@class='form-control is-invalid'])[1]")
     public WebElement ileriranevutar;
@@ -44,8 +49,8 @@ public class TeacherPage {
     @FindBy(xpath = "(//*[@id='description'])[1]")
     public WebElement description;
 
-    @FindBy (className = "fw-semibold btn btn-primary btn-lg")
-    public WebElement submitteacher;
+   @FindBy (className = "btn-lg")
+   public WebElement submitteacher;
 
     @FindBy(xpath = "//span[text()='2023-07-20']")
     public WebElement mevcutdate;
@@ -59,8 +64,8 @@ public class TeacherPage {
     @FindBy(xpath = "//span[text()='ok']")
     public WebElement mevcutdesc;
 
-    @FindBy(className ="text-dark btn btn-outline-info" )
-    public WebElement edit;
+  //  @FindBy(className ="text-dark btn btn-outline-info" )
+  //  public WebElement edit;
 
     @FindBy(xpath = "(//*[@class=' css-19bb58m])[2]")
     public WebElement editChooseSt;
@@ -79,6 +84,8 @@ public class TeacherPage {
 
     @FindBy(xpath = "(//*[@class='fw-semibold btn btn-primary btn-lg])[2]")
     public WebElement editsubmit;
+
+
 
 
 

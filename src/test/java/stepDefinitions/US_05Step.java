@@ -11,6 +11,9 @@ public class US_05Step {
 
 
 
+/*
+
+
     /*
       @Given("Admin olarak {string} adresine gider")
       public void admin_olarak_adresine_gider(String string) {
@@ -23,6 +26,7 @@ public class US_05Step {
           // Write code here that turns the phrase above into concrete actions
           throw new io.cucumber.java.PendingException();
       }
+
 
 
     @Then("Admin olarak username kutusununa {string} girer")
@@ -102,6 +106,9 @@ public class US_05Step {
 
     }
 
+
+
+ */
 
      */
 

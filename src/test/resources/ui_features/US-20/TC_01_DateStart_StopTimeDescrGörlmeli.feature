@@ -3,7 +3,7 @@ Feature: Teacher toplantilari gorebilmeli, guncelleyebilmeli ve silebilmelidir
   Scenario: Toplantıların,Date, Start Time, Stop Time ve Description görülmeli
 
 
-    Given Kullanici ana sayfaya gider
+    Given Kullanici ana sayfaya gitmeli
     Then Login butonuna tiklar
     And User Name girer
     And Password u girer
