@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         glue = {"stepDefinitions","hooks"},
 
 
-        tags ="@Vice",
+        tags ="@Bahar",
 
 
 
