@@ -17,7 +17,7 @@ Feature: US08_Choose_Lesson
     And  Kullanici Lesson Name bolumune ders ismi girer
     And  Kullanici Compulsory butonuna tiklar
     And  Kullanici Credit Score bolumune kredi notu girer
-    And  Kullanici Submit butonuna tiklar
+    And  Kullanici Submit butonuna tiklamalidir
     And  Kullanici Lesson Created mesajini gorur
     And Kullanici siteden cikar
 
