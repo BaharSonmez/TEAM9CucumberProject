@@ -22,26 +22,27 @@ public class US24StepDefinition {
  }
     @And("Kullanici ilgili sayfaya gider")
     public void kullaniciIlgiliSayfayaGider() {
-    Assert.assertTrue(ogretmenOlusturma.login.isDisplayed());
+    Assert.assertTrue(ogretmenOlusturma.homePageLogin1.isDisplayed());
     }
 
     @And("Kullanici {string} kutusuan AdminB{int} girer")
     public void kullaniciKutusuanAdminBGirer(String username1, int arg1) {
-    ogretmenOlusturma.username.sendKeys(username1);
+    ogretmenOlusturma.username.sendKeys(ConfigReader.getProperty("username1"));
 
     }
 
 
     @And("Kullanici Password{int} kutusuna tiklar")
     public void kullaniciPasswordKutusunaTiklar(int password) {
-        ogretmenOlusturma.password1.click();
+     ogretmenOlusturma.paaswordKutusu.isDisplayed();
 
     }
 
     @Then("Kullanici {string} olarak {int} bilgisini girer")
     public void kullaniciOlarakBilgisiniGirer(String c, int t) {
 
-   ogretmenOlusturma.password1.sendKeys(c);
+   ogretmenOlusturma.password.sendKeys(ConfigReader.getProperty("password1"));
+   ReusableMethods.click(ogretmenOlusturma.login);
     }
 
     @And("Kullanici Menu kutusuna gider")
@@ -53,7 +54,7 @@ public class US24StepDefinition {
     @Then("Kullanici Menu kutusuna tiklar")
     public void kullaniciMenuKutusunaTiklar() {
 
-   ogretmenOlusturma.menuButonu.click();
+    ReusableMethods.click(ogretmenOlusturma.menuButonu);
     }
 
     @And("Kullanici acilan sayfada Teacher Management kutusuna gelir")
@@ -63,8 +64,7 @@ public class US24StepDefinition {
 
     @Then("Kullanici Teacher Managemnet secenegini tiklar")
     public void kullaniciTeacherManagemnetSeceneginiTiklar() {
-   ogretmenOlusturma.teacherMngBotonu.click();
-
+    ReusableMethods.click(ogretmenOlusturma.teacherMngBotonu);
 
     }
 
@@ -162,17 +162,18 @@ public class US24StepDefinition {
 
     @Then("Kullanici Female ve Male kutucuklarindan birine tiklar")
     public void kullaniciFemaleVeMaleKutucuklarindanBirineTiklar() {
-    ogretmenOlusturma.maleKutusu.click();
+    ReusableMethods.click(ogretmenOlusturma.maleKutusu);
     }
 
     @And("Kullanici Date of Birth kutucuguna gelir ve sag taraftaki takvim isaretine tiklar")
     public void kullaniciDateOfBirthKutucugunaGelirVeSagTaraftakiTakvimIsaretineTiklar() {
-      ogretmenOlusturma.birthPlaceKutusu.click();
+      ogretmenOlusturma.dateOfBirth.click();
     }
 
     @And("Kullanici{string} secer")
     public void kullaniciSecer(String DateOfBirth) {
-     ogretmenOlusturma.birthPlaceKutusu.sendKeys(DateOfBirth);
+     ogretmenOlusturma.dateOfBirth.sendKeys(DateOfBirth,Keys.ENTER);
+     //ReusableMethods.click(ogretmenOlusturma.birthPlaceKutusu);
     }
 
     @And("Kullanici Ssn kutucuguna gider")

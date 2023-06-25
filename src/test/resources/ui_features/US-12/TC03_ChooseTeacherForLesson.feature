@@ -1,4 +1,4 @@
-
+@Ece2
 Feature: Vice Dean Ogretmene ders atayabilmeli
   Scenario: TC-03 Ders icin ogretmen secebilmeli
     Given Kullanıcı _"https://managementonschools.com/" sayfasina gider

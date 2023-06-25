@@ -1,5 +1,7 @@
 
+@Ece
 Feature: Vice Dean Ogretmene ders atayabilmeli
+
   Scenario: TC_02 Chooese Loesson bolumune secilen dersin geldigi gorunmelidir
     Given Kullanıcı _"https://managementonschools.com/" sayfasina gider
     When Kullanici Login butonuna tiklar

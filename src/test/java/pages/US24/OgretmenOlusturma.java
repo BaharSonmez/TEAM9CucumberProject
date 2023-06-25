@@ -21,16 +21,14 @@ public class OgretmenOlusturma {
     @FindBy(xpath ="//input[@id='password']")
     public WebElement password ;
 
-    @FindBy(xpath ="(//button[@type='button'])[3]")
+    @FindBy(xpath ="//button[@class='fw-semibold btn btn-primary']")
     public WebElement login;
 
     @FindBy(xpath ="//*[text()='Teacher Management']")
     public WebElement teacherManagement;
 
-    @FindBy(xpath ="//input[@id='password']")
-    public WebElement password1 ;
 
-    @FindBy(xpath ="(//button[@type='button'])[1]")
+    @FindBy(xpath ="//*[text()='Menu']")
     public WebElement menuButonu;
 
     @FindBy(xpath ="(//a[@class='nav-link'])[10]")
@@ -69,7 +67,7 @@ public class OgretmenOlusturma {
    @FindBy(xpath ="(//*[@class='form-label'])[1]")
     public WebElement genderYazisi;
 
-   @FindBy(xpath ="//*[text()='Male']")
+   @FindBy(xpath ="(//input[@class='form-check-input'])[3]")
     public WebElement maleKutusu;
 
    @FindBy(xpath ="//input[@id='birthDay']")

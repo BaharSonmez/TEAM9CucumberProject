@@ -20,23 +20,23 @@ public class US13StepDefinition1 {
     @When("Kullanici acilan sayfada login butonuna tiklar")
     public void kullanici_acilan_sayfada_login_butonuna_tiklar() {
         Driver.getDriver().get(ConfigReader.getProperty("url1"));
-        viceDeanOgretmenOlusturma.login1.click();
+       ReusableMethods.click(viceDeanOgretmenOlusturma.homePageLogin1);
 
-        ReusableMethods.bekle(2);
+
 
     }
 
     @When("Kullanici username kismina AdminB129 bilgisini girer")
     public void kullanici_username_kismina_admin_b129_bilgisini_girer() {
-        viceDeanOgretmenOlusturma.username1.click();
-        viceDeanOgretmenOlusturma.username1.sendKeys(ConfigReader.getProperty("viceusername1"), Keys.ENTER);
+        viceDeanOgretmenOlusturma.username.click();
+        viceDeanOgretmenOlusturma.username.sendKeys(ConfigReader.getProperty("username1"), Keys.ENTER);
         ReusableMethods.bekle(2);
     }
 
     @When("Kullanici Ppassword okutusuna {int} bilgisini girer")
     public void kullanici_ppassword_okutusuna_bilgisini_girer(Integer int1) {
-        viceDeanOgretmenOlusturma.password1.click();
-        viceDeanOgretmenOlusturma.password1.sendKeys(ConfigReader.getProperty("vicepassword1"));
+        viceDeanOgretmenOlusturma.password.click();
+        viceDeanOgretmenOlusturma.password.sendKeys(ConfigReader.getProperty("password1"),Keys.ENTER);
         ReusableMethods.bekle(2);
 
     }
@@ -51,13 +51,13 @@ public class US13StepDefinition1 {
     @When("Kullannici  Teacher Management kismi tiklanabilir olmali")
     public void kullannici_teacher_management_kismi_tiklanabilir_olmali() {
 
-        viceDeanOgretmenOlusturma.teacherManagement.isSelected();
+       viceDeanOgretmenOlusturma.teacherManagement.isSelected();
 
     }
 
     @When("Acilan sayfada AddTeacher ve Choose Lessons kutusu gorunur olmali")
     public void acilan_sayfada_add_teacher_ve_choose_lessons_kutusu_gorunur_olmali() {
-        viceDeanOgretmenOlusturma.teacherManagement.click();
+       viceDeanOgretmenOlusturma.teacherManagement.click();
 
     }
 

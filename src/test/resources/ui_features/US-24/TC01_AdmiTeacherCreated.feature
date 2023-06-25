@@ -1,4 +1,4 @@
-
+@Bahar2
 Feature:  Admin Teacher olusturabilmeli
 Scenario Outline:TC001 Admin hesabi ile Teacher olusturulabilmeli
  Given Kullanici ilgili sayfaya tiklar ve  gider
@@ -42,5 +42,5 @@ Scenario Outline:TC001 Admin hesabi ile Teacher olusturulabilmeli
  And Kullanici Submit3 kutusuna tiklar
  And Kullanici "Teacher saved Successfully" onay yazisini gorur
  Examples:
-  | Username | Password | Name | Surname | Birth Place | email                  | Phone      | Date Of Birth | Ssn | User name |
-  | AdminB129| 12345678 |Bahar | Sonmez  | Kirklareli  | Vefasonmezams@gmail.com|222-444-5555| 22/02/1992    |445  | Bahar     |
+  | Username | Password | Name | Surname | Birth Place | email                  | Phone      | Date Of Birth | Ssn         | User name |
+  | AdminB129| 12345678 |Ece   | Sonmez  | Kirklareli  | Vefasonmezams@gmail.com|222-444-5555| 22/02/1992    |445-22-4567  | Bahar     |

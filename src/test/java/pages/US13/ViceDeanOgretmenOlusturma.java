@@ -9,18 +9,20 @@ public class ViceDeanOgretmenOlusturma {
 
     public ViceDeanOgretmenOlusturma(){PageFactory.initElements(Driver.getDriver(),this);
     }
+    @FindBy(xpath = "//a[@class='header_link ms-2']")
+    public WebElement homePageLogin1;
 
+    @FindBy(xpath ="//input[@id='username']")
+    public WebElement username ;
+
+    @FindBy(xpath ="//input[@id='password']")
+    public WebElement password ;
+
+    @FindBy(xpath ="//button[@class='fw-semibold btn btn-primary']")
+    public WebElement login;
 
     @FindBy(xpath ="//*[text()='Teacher Management']")
     public WebElement teacherManagement;
-    @FindBy(xpath ="//a[@class='header_link ms-2']")
-    public WebElement login1;
-
-    @FindBy(xpath ="//input[@id='username']")
-    public WebElement username1 ;
-
-    @FindBy(xpath ="//input[@id='password']")
-    public WebElement password1 ;
     @FindBy(xpath ="//*[@class=' css-1xc3v61-indicatorContainer']")
     public WebElement ChoseLes1;
     @FindBy(xpath ="//*[@class=' css-9jq23d']")
