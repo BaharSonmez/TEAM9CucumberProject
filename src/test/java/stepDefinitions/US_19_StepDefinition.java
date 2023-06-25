@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pages.Login;
 import pages.TeacherPage;
@@ -38,7 +39,7 @@ public class US_19_StepDefinition {
     }
     @Then("Tekrar Login butonuna tiklar")
     public void tekrar_login_butonuna_tiklar() {
-        teacherPage.login2.click();
+        ReusableMethods.click(teacherPage.login);
 
     }
     @Then("Menu butonuna tiklar")
@@ -53,15 +54,22 @@ public class US_19_StepDefinition {
     }
     @Then("Add Meet den Choose Students i tiklar ve cikan listeden  ogrenci secer")
     public void add_meet_den_choose_students_i_tiklar_ve_cikan_listeden_ogrenci_secer() {
-        teacherPage.ChooseStudents.click();
-        ReusableMethods.click(teacherPage.ogrIsimSec);
-        Select select=new Select(teacherPage.ogrIsimSec);
-        select.selectByIndex(1);
+       ReusableMethods.click(teacherPage.ChooseStudent);
+        ReusableMethods.bekle(2);
+        Select select = new Select(teacherPage.ogrIsimSec);
+        select.selectByIndex(3);
+
+
+
+
+
+
+
+
 
     }
     @Given("Date Of Meet e tiklar ve ileriki bir tarihi girer")
     public void date_of_meet_e_tiklar_ve_ileriki_bir_tarihi_girer() {
-        ReusableMethods.click(teacherPage.ileriranevutar);
         teacherPage.ileriranevutar.sendKeys(ConfigReader.getProperty("ileriranevutar"));
 
     }
@@ -94,7 +102,7 @@ public class US_19_StepDefinition {
     }
     @Given("Submit butonuna tiklar")
     public void submit_butonuna_tiklar() {
-        ReusableMethods.click(teacherPage.submitteacher);
+       ReusableMethods.click(teacherPage.submitteacher);
 
     }
 }

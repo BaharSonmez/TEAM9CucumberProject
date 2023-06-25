@@ -10,7 +10,6 @@ public class US_04Step {
 
     @Given("Admin olarak {string} adresine gider")
     public void admin_olarak_adresine_gider(String string) {
-        throw new io.cucumber.java.PendingException();
     }
 
     @Then("Admin olarak Login ikonunu tiklar")

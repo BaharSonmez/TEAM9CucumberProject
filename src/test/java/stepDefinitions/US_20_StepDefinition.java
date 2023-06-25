@@ -13,44 +13,9 @@ import utilities.ReusableMethods;
 public class US_20_StepDefinition {
     TeacherPage teacherPage=new TeacherPage();
 
-    @Given("Kullanici ana sayfaya gider")
-    public void kullanici_ana_sayfaya_gider() {
-        Driver.getDriver().get(ConfigReader.getProperty("url"));
-        ReusableMethods.bekle(2);
 
 
-    }
-    @Then("Login butonuna tiklar")
-    public void login_butonuna_tiklar() {
-        ReusableMethods.click(teacherPage.login1);
-        ReusableMethods.bekle(2);
 
-    }
-    @Then("User Name girer")
-    public void user_name_girer() {
-        teacherPage.usernameButton.sendKeys(ConfigReader.getProperty("usernameteacher"));
-
-    }
-    @Then("Password u girer")
-    public void password_u_girer() {
-        teacherPage.passwordButton.sendKeys(ConfigReader.getProperty("passwordteacher"));
-
-    }
-    @Then("Tekrar Login butonuna tiklar")
-    public void tekrar_login_butonuna_tiklar() {
-        teacherPage.login2.click();
-
-    }
-    @Then("Menu butonuna tiklar")
-    public void menu_butonuna_tiklar() {
-        teacherPage.menuButton.click();
-
-    }
-    @Then("Meet Management i secer")
-    public void meet_management_i_secer() {
-        teacherPage.meetManagementButton.click();
-
-    }
     @Given("Meet list de toplantinin Date Start Time Stop Time  Descriptionu gorur")
     public void meet_list_de_toplantinin_date_start_time_stop_time_descriptionu_gorur() {
         Assert.assertTrue(teacherPage.mevcutdate.isDisplayed());
@@ -86,4 +51,6 @@ public class US_20_StepDefinition {
     @And("Silmek istedigi toplantinin karssindaki cop Kutusu butonuna tiklar ve siler")
     public void silmekIstedigiToplantininKarssindakiCopKutusuButonunaTiklarVeSiler() {
     }
+
+
 }

@@ -3,13 +3,7 @@ Feature: Teacher toplantilari gorebilmeli, guncelleyebilmeli ve silebilmelidir
   Scenario: Toplantıları guncelleyebilmeli
 
 
-    Given Kullanici ana sayfaya gider
-    Then Login butonuna tiklar
-    And User Name girer
-    And Password u girer
-    And Tekrar Login butonuna tiklar
-    And Menu butonuna tiklar
-    And Meet Management i secer
+
     And Meet list de toplantinin Date Start Time Stop Time  Descriptionu gorur
     And Edit butonuna tiklar ve Date de guncelleme yapar
     And Edit butonuna tiklar ve Start Time da guncelleme yapar
