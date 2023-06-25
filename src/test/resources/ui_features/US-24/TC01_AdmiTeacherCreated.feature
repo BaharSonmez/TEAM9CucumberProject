@@ -19,13 +19,13 @@ Scenario Outline:TC001 Admin hesabi ile Teacher olusturulabilmeli
  Then Kullanici Name kutusuna gelir
  And Kullanici "<Name>" bilgisini girer
  Then Kullanici surname kutusuna gider
- And Kullanici "<Surname>" bilgisini girer
+ And Kullanici "<Surname>" bilgisini kutuya  girer
  Then Kullanici Birth Place kutusuna gider
- And Kullanici "<Birth Place>" bilgisini girer
+ And Kullanici "<Birth Place>" bilgisini girebilmeli
  And Kullanici emailkutusuna gelir
  Then Kulalnici "<email>" bilgisini girer
  And Kullanici Phone kutusuna gelir
- Then Kullanici "<Phone>" bilgisini girer
+ Then Kullanici "<Phone>"  numarasini bilgisini girer
  And Kullanici "Is Advisor Teacher" yazisindaki kutucuga gider
  Then Kullanici iilgili kutucuga tiklar
  And Kullanci Gender sceneklerinin oldugu yere gelir
@@ -33,7 +33,7 @@ Scenario Outline:TC001 Admin hesabi ile Teacher olusturulabilmeli
  And Kullanici Date of Birth kutucuguna gelir ve sag taraftaki takvim isaretine tiklar
  And Kullanici"<Date Of Birth>" secer
  And Kullanici Ssn kutucuguna gider
- Then Kullanici "<Ssn>" bilgisini girer
+ Then Kullanici "<Ssn>" bilgisini  rakam olarak girer
  And Kullanici User Name kutucuguna gelir
  Then Kullanici "<User name>" kutusuna bilgisi girer
  And Kullanici Password kutucuguna gelir
