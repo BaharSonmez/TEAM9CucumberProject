@@ -17,6 +17,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources",
         glue = {"stepDefinitions","hooks"},
 
+        tags ="@US23_TC08",
+
+
 
         tags ="@Vice",
 
@@ -27,6 +30,7 @@ import org.junit.runner.RunWith;
 
 
         //tags ="@US15Api",
+
 
 
 
